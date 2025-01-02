@@ -50,9 +50,9 @@ jobs:
           valueFile: 'spring-rest-helloworld/overlays/uat/kustomization.yaml'
           branch: main
           createPR: 'false'
-          # targetBranch: main <-- for pull request          
-          # title: 'Version Updates' <-- for pull request
-          # description: 'Test GitHub Action' <-- for pull request
+          targetBranch: main #for pull request          
+          title: 'Version Updates' # for pull request
+          description: 'Test GitHub Action' # for pull request
           message: 'Update latest docker image version'
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           workDir: temp_workspace
