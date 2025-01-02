@@ -49,7 +49,7 @@ jobs:
           repository: yewintaung/argocd-apps
           valueFile: 'spring-rest-helloworld/overlays/uat/kustomization.yaml'
           branch: main
-          createPR: 'false'
+          createPR: 'true'
           targetBranch: main #for pull request          
           title: 'Version Updates' # for pull request
           description: 'Test GitHub Action' # for pull request
