@@ -43,6 +43,13 @@ jobs:
           push: true
           tags: ghcr.io/yewintaung/spring-rest-helloworld:${{ steps.tag-version.outputs.version }}
 
+      - name: Checkout Kustomize chart Repository
+        uses: actions/checkout@v3
+        with:
+          repository: yewintaung/argocd-apps
+          path: temp_workspace
+          token: ${{ secrets.MY_GITHUB_TOKEN }} 
+
       - name: Updated latest docker version
         uses: fjogeleit/yaml-update-action@main
         with:
